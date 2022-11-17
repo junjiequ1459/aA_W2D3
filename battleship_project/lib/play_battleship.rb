@@ -9,7 +9,7 @@ puts "Enter a size for the game: "
 battleship = Battleship.new(gets.chomp.to_i)
 battleship.start_game
 
-until battleship.game_over? do
+until battleship.game_over?
   puts "-------------------------"
   battleship.turn
 end
