@@ -1,1 +1,1 @@
-p Array.new(3) { Array.new (3) { "_" } }
+p (Array.new(3) { Array.new (3) { "_" } }).size
