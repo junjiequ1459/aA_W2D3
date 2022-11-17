@@ -23,16 +23,18 @@ class Game
     while @board.empty_positions?
       @board.print
       @board.place_mark(@current_player.get_position, @current_player.mark_value)
-      if @board.win?
+      if @board.win?(current_player.mark_value)
         p "#{@current_player} Won"
-        return 0
+        @board.print
+        return
       end
       self.switch_turn
     end
+    @board.print
     p "Its a draw"
   end
 end
 
-game = Game.new(:X, :O)
+game = Game.new(:😀, :🥶)
 
 game.play

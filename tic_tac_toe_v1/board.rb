@@ -31,7 +31,11 @@ class Board
   end
 
   def print
-    p @board
+    @board.each { |x|
+      puts x.join(" ")
+    }
+
+    puts "\n"
   end
 
   def win_row?(mark)
@@ -84,10 +88,10 @@ class Board
     @board.each do |arr|
       arr.each do |ele|
         if ele == "_"
-          return false
+          return true
         end
       end
     end
-    true
+    false
   end
 end
